@@ -1,1 +1,45 @@
-<h1>Hello</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Tidy Nginx</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./formatter.js" defer></script>
+</head>
+
+<body>
+
+    <header class="app-header">
+        <div class="logo">
+            <span class="logo-icon">{ }</span>
+            <span class="logo-text">TidyNginx</span>
+        </div>
+        <p class="tagline">Format, clean, and convert NGINX configs</p>
+    </header>
+
+    <div class="actions">
+        <button class="primary" onclick="jsonToConf()">JSON → CONF</button>
+        <button onclick="confToJson()">CONF → JSON</button>
+    </div>
+
+    <div class="editor">
+        <div class="panel">
+            <div class="panel-header">
+                <label>Input</label>
+                <button class="copy" onclick="copyText('input', this)">Copy</button>
+            </div>
+            <textarea id="input" placeholder="Paste JSON or nginx.conf here"></textarea>
+        </div>
+
+        <div class="panel">
+            <div class="panel-header">
+                <label>Output</label>
+                <button class="copy" onclick="copyText('output', this)">Copy</button>
+            </div>
+            <textarea id="output" placeholder="Output will appear here" readonly></textarea>
+        </div>
+    </div>
+</body>
+
+</html>

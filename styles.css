@@ -1,0 +1,149 @@
+:root {
+    --primary: #00B140;
+    --bg: #f5f7f6;
+    --panel-bg: #ffffff;
+    --border: #dcdcdc;
+    --text: #1f2933;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.app-header {
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.logo-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background: var(--primary);
+    color: #fff;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", "Courier New", monospace;
+    font-size: 16px;
+}
+
+.tagline {
+    margin: 6px 0 0;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.actions {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+button {
+    padding: 6px 14px;
+    margin-right: 8px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: #ffffff;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+button.primary {
+    background: var(--primary);
+    color: #ffffff;
+    border-color: var(--primary);
+}
+
+button.copy {
+    font-size: 11px;
+    padding: 4px 10px;
+}
+
+.editor {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    min-height: 0;
+}
+
+.panel {
+    background: var(--panel-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.panel-header label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+textarea {
+    flex: 1;
+    resize: none;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", "Courier New", monospace;
+    font-size: 13px;
+    line-height: 1.45;
+    background: #fafafa;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: #ffffff;
+}
+
+textarea[readonly] {
+    background: #f9faf9;
+}
+
+@media (max-width: 900px) {
+    .editor {
+        grid-template-columns: 1fr;
+    }
+}
