@@ -1,2 +1,2 @@
 # tidynginx
-A formatter for nginx
+A formatter for nginx json
